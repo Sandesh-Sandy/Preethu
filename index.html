@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: darkviolet;
+            color: cyan;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 600;
+            font-size: 70px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id='head'></h1>
+    <script>
+        function wish(i, f) {
+            setTimeout(() => {
+                f(i);
+            }, (5-(i-1))*1000)
+        }
+        let k = 0;
+        for(var i=5;i>0;i--) {
+            wish(i, (j) => {
+                if(j === 1) {
+                    document.getElementById('head').innerHTML = j;
+                    setTimeout(() => {
+                        document.getElementById('head').innerHTML = 'Happy Birthday Preethu';
+                    }, 1000);
+                }
+                else {
+                    document.getElementById('head').innerHTML = j;
+                }
+            });
+        }
+        
+    </script>
+</body>
+</html>
